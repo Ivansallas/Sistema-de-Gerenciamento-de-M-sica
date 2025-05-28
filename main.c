@@ -1,35 +1,35 @@
-ï»¿#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
 
 int main()
 {
-    if (!setlocale(LC_ALL, "pt_BR.UTF-8")) // ou "pt_PT.UTF-8"
-    {
-        setlocale(LC_ALL, "Portuguese_Brazil"); // Fallback para Windows
-    }
+    setlocale(LC_ALL, "Portuguese");
 
     int opcao;
-
-    printf("___________________MENU_____________________\n");
-    printf("| [1] Cadastrar mÃºsicas                    |\n");
-    printf("| [2] Listar mÃºsicas                       |\n");
-    printf("| [3] Buscar mÃºsica por tÃ­tulo ou artista |\n");
-    printf("| [4] Editar informaÃ§Ãµes de uma mÃºsica   |\n");
-    printf("| [5] Remover uma mÃºsica do sistema        |\n");
+    printf("|-------------------------------------------|\n");
+    printf("|__________________MENU_____________________|\n");
+    printf("| Bem-vindo ao sistema de gerenciamento de  |\n");
+    printf("| músicas!                                  |\n");
+    printf("| seleciona uma opção:                      |\n");
+    printf("| [1] Cadastrar músicas                     |\n");
+    printf("| [2] Listar músicas                        |\n");
+    printf("| [3] Buscar música por título ou artista   |\n");
+    printf("| [4] Editar informações de uma música      |\n");
+    printf("| [5] Remover uma música do sistema         |\n");
     printf("| [6] Salvar e carregar dados de um arquivo |\n");
-    printf("|___________________________________________|\n");
+    printf("|___________________________________________|");
 
-    printf("\nDigite a opÃ§Ã£o desejada: ");
+    printf("\nDigite a opção desejada: ");
     if (scanf("%d", &opcao) != 1)
     {
-        printf("Entrada invÃ¡lida. Por favor, insira um nÃºmero.\n");
+        printf("Entrada inválida. Por favor, insira um número.\n");
         return 1; // Encerrar com erro
     }
 
-    printf("VocÃª escolheu a opÃ§Ã£o: %d\n", opcao);
+    printf("Você escolheu a opção: %d\n", opcao);
 
-    // Aqui vocÃª pode usar um switch para tratar as opÃ§Ãµes futuramente
+    // Aqui você pode usar um switch para tratar as opções futuramente
 
     return 0;
 }
